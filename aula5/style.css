@@ -1,0 +1,404 @@
+body{
+
+    margin: 0;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+
+}
+
+
+h2{
+
+    margin: 0px;
+
+}
+
+h3{
+
+    margin: 0px;
+
+}
+
+#idLogo{
+
+    background-color: #46b350;
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+}
+
+#idLog{
+    
+    background-color: #d0e7cc;
+    color: #004103;
+    font-family: "Fleur De Leah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 500px;
+    text-align: center;
+    border-radius: 999999px;
+
+}
+
+
+a{
+
+    color: #000000;
+    font-weight: 650;
+    text-decoration: none;
+
+}
+
+#idAboutAncoras{
+
+    color: #f3f5f3;
+    font-weight: 650;
+    text-decoration: none;
+
+}
+
+p{
+
+    color: #314141;
+
+}
+
+#idPlanoSA{
+
+    color: #fefefe;
+
+}
+
+#idAbout{
+
+    background-color: #46b350;
+
+}
+
+#idPrices{
+
+    background-color: #fefefe;
+
+}
+
+#idFeatures{
+
+    background-color: #d0e7cc;
+
+}
+
+#idMenu{
+    
+    padding: 10px 20px 10px 20px;
+    margin: 0px 0px 0px 0px;
+    font-weight: 800;
+    background-color: #fefefed7;
+    color: #46b350;
+
+}
+
+#idMenuAbout{
+
+    font-weight: 450;
+    color: #46b350;
+
+}
+
+#idMenuPrices{
+
+    font-weight: 450;
+    color: #46b350;
+    
+}
+
+#idMenuFeatures{
+
+    font-weight: 450;
+    color: #46b350;
+    
+}
+
+#idMenuLogin{
+
+    font-weight: 450;
+    color: #fefefe;
+    
+}
+
+.max-w-lg{
+
+    max-width: 800px;
+
+}
+
+.mx-auto{
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.mx-4{
+
+    margin-left: 16px;
+    margin-right: 16px;
+
+}
+
+.py-1{
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+
+.py-2{
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+}
+
+.py-3{
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+}
+
+.py-4{
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}
+
+.py-5{
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+}
+
+.px-3{
+
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+.px-4{
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+.px-5{
+
+    padding-left: 32px;
+    padding-right: 32px;
+
+}
+
+.px-10{
+
+    padding-left: 1024px;
+    padding-right: 1024px;
+
+}
+
+.px-5{
+
+    padding-left: 32px;
+    padding-right: 32px;
+
+}
+
+.p-2{
+
+    padding: 4px;
+
+}
+
+.p-3{
+
+    padding: 8px;
+
+}
+
+.p-4{
+
+    padding: 16px;
+
+}
+
+.p-6{
+
+    padding: 64px;
+
+}
+
+.bg-white{
+
+    background-color: #d0e7cc;
+
+}
+
+.bg-green{
+
+    background-color: #46b350;
+
+}
+
+.bg-medGreen{
+
+    background-color: #6cc07f;
+
+}
+
+.text-white{
+
+    color: #fefefe;
+
+}
+
+.rounded{
+
+    border-radius: 4px;
+
+}
+
+.rounded-md{
+
+    border-radius: 6px;
+
+}
+
+.rounded-lg{
+
+    border-radius: 8px;
+
+}
+
+.rounded-xl{
+
+    border-radius: 12px;
+
+}
+
+.rounded-full{
+
+    border-radius: 9999px;
+
+}
+
+.flex{
+
+    display: flex;
+
+}
+
+.gap-2{
+
+    gap: 8px;
+
+}
+
+.gap-4{
+
+    gap: 16px;
+
+}
+
+.gap-8{
+
+    gap: 32px;
+
+}
+
+.gap-16{
+
+    gap: 64px;
+
+}
+
+.items-center{
+
+    align-items: center;
+
+}
+
+.ml-auto{
+
+    margin-left: auto;
+
+}
+
+.mr-2{
+
+    margin-right: 4px;
+
+}
+
+.mr-4{
+
+    margin-right: 16px;
+
+}
+
+.mr-5{
+
+    margin-right: 32px;
+
+}
+
+.shadow {
+
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+
+}
+
+.shadowM {
+
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.absolute {
+
+    position: absolute;
+
+}
+
+.top-0 {
+
+    position: 0;
+
+}
+
+.fixed {
+
+    position: fixed;
+
+}
+
+.w-full {
+
+    width: 100%;
+
+}
+
+.text-center{
+
+    text-align: center;
+
+}

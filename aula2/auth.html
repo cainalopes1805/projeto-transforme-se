@@ -1,0 +1,107 @@
+<a 
+    href = "index.html">
+
+    Voltar
+
+</a>
+
+<a 
+    href = "example.html">
+
+    Example
+
+</a>
+
+<h2>
+
+    Meu formulário
+
+</h2>
+
+<p>
+
+    Preencha as informações abaixo
+
+</p>
+
+<form 
+    id = "formRegister">
+
+    Nome:
+        <input 
+            id = "idName" 
+            type = "text" 
+            placeholder = "Digite seu nome completo" />
+
+    <br>
+
+    Email:
+        <input 
+            id = "idEmail" 
+            type = "email" 
+            placeholder = "Digite o seu melhor email" />
+    <br>
+
+    Senha:
+        <input 
+            id = "idPassword" 
+            type = "password" 
+            placeholder = "Letra maiúscula e números" />
+    <br>
+
+    Data de nascimento:
+        <input 
+            id = "idDate" 
+            type = "date" />
+
+    <button 
+        type = "submit">
+
+        Salvar
+
+    </button>
+
+</form>
+
+<h2>
+
+    Resposta
+
+</h2>
+
+<pre 
+    id = "idResponse">
+
+</pre>
+
+<script>
+    //document é a página toda
+    //get= pegar, elemento= elemento do html
+
+    var users = [] //vetor
+    var formR = document.getElementById("formRegister")
+    //adicionando escutar o evento
+
+    formR.addEventListener("submit", (e) => {
+        e.preventDefault() //impede atualizar a tela
+
+        let name = document.getElementById("idName").value
+        let email = document.getElementById("idEmail").value
+        let password = document.getElementById("idPassword").value
+        let date = document.getElementById("idDate").value
+
+        const user = { //objeto anônimo, estrutura, json
+            nome: name,
+            email: email,
+            senha: password,
+            nascimento: date
+
+        }
+
+        users.push(user)
+        let response = document.getElementById("idResponse")
+        response.innerHTML = JSON.stringify(users, null, 4)
+
+    })
+
+</script>

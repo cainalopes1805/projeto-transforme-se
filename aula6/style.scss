@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+
+
+$font-primary: "Roboto", sans-serif;
+
+$font-secondary: "Lucida Sans", Verdana, sans-serif;
+
+$font-terciary: "Fleur De Leah", cursive;
+
+$color-background: #46b350;
+
+
+$color-text: #314141;
+
+$color-title: #000000;
+
+$color-paragraph: #314141;
+
+$color-link: #000000;
+
+
+$color-primary: #46b350;
+
+$color-secondary: #6cc07f;
+
+
+$color-dark: #000000;
+
+$color-white: #fefefe;
+
+
+$color-about: #314141;
+
+$color-features: #fefefe;
+
+$color-prices: #314141;
+
+
+$backgrounds: (
+    "primary": $color-primary,
+    "secondary": $color-secondary,
+    "dark": $color-dark,
+    "white": $color-white,
+    "about": $color-about,
+    "features": $color-features,
+    "prices": $color-prices
+);
+
+$text-colors: (
+    "white": $color-white,
+    "dark": $color-dark,
+    "primary": $color-primary,
+    "secondary": $color-secondary
+);
+
+
+$pixels: (
+
+    0: 0px,
+    1: 2px,
+    2: 4px,
+    3: 8px,
+    4: 16px,
+    5: 32px,
+    6: 64px
+);
+
+
+$radius: (
+    default: 4px,
+    md: 6px,
+    lg: 8px,
+    xl: 12px,
+    full: 9999px
+);
+
+$font-size: (
+
+    1: 2px,
+    2: 4px,
+    3: 6px,
+    4: 8px,
+    5: 10px,
+    6: 12px,
+    7: 14px,
+    8: 16px,
+    9: 18px,
+    10: 20px,
+    11: 22px,
+    12: 24px
+);
+
+@each $name, $value in $font-size {
+    .fs-#{$name} {
+        font-size: $value;
+    }
+};
+
+
+$shadows: (
+    default: 0 1px 3px rgba(0, 0, 0, 0.15),
+    md: 0 4px 6px rgba(0, 0, 0, 0.15),
+    lg: 0 10px 15px rgba(0, 0, 0, 0.15),
+    inner: inset 0 2px 4px rgba(0, 0, 0, 0.25)
+);
+
+
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+}
+
+
+@mixin state($state, $utility) {
+    .#{$state}\:#{$utility}:#{$state} {
+        @content;
+    }
+}
+
+
+body {
+    background-color: $color-background;
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-text;
+    margin: 0;
+}
+
+.font-terciary {
+
+    font-family: $font-terciary;
+
+}
+
+h2 {
+    color: $color-title;
+}
+
+
+p {
+    color: $color-paragraph;
+    font-family: $font-secondary;
+}
+
+
+a {
+    color: $color-link;
+    text-decoration: none;
+    font-family: $font-secondary;
+}
+
+#about {
+    background-color: $color-about;
+}
+
+#prices{
+    background-color: $color-prices;
+}
+
+#features {
+    background-color: $color-features;
+}
+
+
+.max-w-md {
+    max-width: 500px;
+}
+
+
+.max-w-lg {
+    max-width: 800px;
+}
+
+
+@each $name, $value in $pixels {
+    .m-#{$name} {
+        margin: $value;
+    }
+}
+
+
+@each $name, $value in $pixels {
+    .mt-#{$name} {
+        margin-top: $value;
+    }
+}
+
+
+@each $name, $value in $pixels {
+    .mb-#{$name} {
+        margin-bottom: $value;
+    }
+
+}
+
+
+@each $name, $value in $pixels {
+    .ml-#{$name} {
+        margin-left: $value;
+    }
+}
+
+
+@each $name, $value in $pixels {
+    .mr-#{$name} {
+        margin-right: $value;
+    }
+}
+
+
+@each $name, $value in $pixels {
+    .mx-#{$name} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+}
+
+
+@each $name, $value in $pixels {
+    .my-#{$name} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+$variant: (
+    "":padding,
+    "t":padding-top,
+    "l":padding-left,
+    "r":padding-right,
+    "b":padding-bottom
+);
+
+
+@each $number, $pixel in $pixels {
+    @each  $n, $v in $variant{
+       .p#{$n}-#{$number} {
+            #{$v}: $pixel
+       } 
+    }  
+}
+
+
+@each $name, $value in $pixels {
+    .px-#{$name} {
+        padding-right: $value;
+        padding-left: $value;
+    }
+}
+
+
+@each $name, $value in $pixels {
+    .py-#{$name} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+}
+
+@each $name, $color in $backgrounds {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+}
+
+
+@each $name, $color in $backgrounds {
+    @include state("hover", "bg-#{$name}") {
+        background-color: $color;
+    }
+}
+
+
+@each $name, $color in $backgrounds {
+    @include state("focus", "bg-#{$name}") {
+        background-color: $color;
+    }
+}
+
+
+@each $name, $color in $backgrounds {
+    @include state("active", "bg-#{$name}") {
+        background-color: $color;
+    }
+}
+
+
+@each $name, $color in $text-colors {
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+
+@each $name, $color in $text-colors {
+    @include state("hover", "text-#{$name}") {
+        color: $color;
+    }
+}
+
+
+$text-alignments: (
+    left: left,
+    center: center,
+    right: right,
+    justify: justify
+);
+
+@each $name, $value in $text-alignments {
+    .text-#{$name} {
+        text-align: $value;
+    }
+}
+
+
+@each $name, $value in $radius {
+    @if $name == default {
+        .rounded {
+            border-radius: $value;
+        }
+    }
+    @else {
+        .rounded-#{$name} {
+            border-radius: $value;
+        }
+    }
+}
+
+
+.w-full {
+    width: 100%;
+}
+
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+
+/* Horizontal */
+.justify-start {
+    justify-content: flex-start;
+}
+
+
+.justify-center {
+    justify-content: center;
+}
+
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+
+.justify-between {
+    justify-content: space-between;
+}
+
+
+.ml-auto {
+    margin-left: auto;
+}
+
+
+$gaps: (
+    2: 8px,
+    4: 16px,
+    8: 32px
+);
+
+
+@each $name, $value in $gaps {
+    .gap-#{$name} {
+        gap: $value;
+    }
+}
+
+
+@each $name, $shadow in $shadows {
+    @if $name == default {
+        .shadow {
+            @include box-shadow($shadow);
+        }
+    }
+    @else {
+        .shadow-#{$name} {
+            @include box-shadow($shadow);
+        }
+    }
+}
+
+
+@each $name, $shadow in $shadows {
+    @if $name == default {
+        @include state("hover", "shadow") {
+            @include box-shadow($shadow);
+        }
+    }
+
+    @else {
+        @include state("hover", "shadow-#{$name}") {
+            @include box-shadow($shadow);
+        }
+    }
+}
+
+
+@each $name, $shadow in $shadows {
+    @if $name == default {
+        @include state("focus", "shadow") {
+            @include box-shadow($shadow);
+        }
+    }
+
+    @else {
+        @include state("focus", "shadow-#{$name}") {
+            @include box-shadow($shadow);
+        }
+    }
+}
+
+
+@each $name, $shadow in $shadows {
+    @if $name == default {
+        @include state("active", "shadow") {
+            @include box-shadow($shadow);
+        }
+    }
+    @else {
+        @include state("active", "shadow-#{$name}") {
+            @include box-shadow($shadow);
+        }
+    }
+}
+
+
+.transition {
+    transition: all 0.2s ease;
+}
+
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+
+.active\:scale-95:active {
+    transform: scale(0.95);
+}
+
+
+.focus\:outline-none:focus {
+    outline: none;
+}
+
+
+.focus\:outline-primary:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+}
+
+
+.disabled\:opacity-50:disabled {
+    opacity: 0.5;
+}
+
+
+.disabled\:cursor-not-allowed:disabled {
+    cursor: not-allowed;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+.absolute {
+    position: absolute;
+}
+
+
+.fixed {
+    position: fixed;
+}
+
+
+.relative {
+    position: relative;
+}
+
+
+.sticky {
+    position: sticky;
+}
+
+
+.top-0 {
+    top: 0;
+}
+
+
+.bottom-0 {
+    bottom: 0;
+}
+
+
+.left-0 {
+    left: 0;
+}
+
+
+.right-0 {
+    right: 0;
+}
+
+
+.right {
+    right: 0;
+}
+
+
+.z-10 {
+    z-index: 10;
+}
+
+
+.z-50 {
+    z-index: 50;
+}

@@ -1,0 +1,134 @@
+<h1>
+
+    Olá, mundo
+
+</h1>
+
+<h2>
+    
+    Isso é verdade
+
+</h2>
+
+<p>
+    
+    <i>Deus</i> <b>existe</b>
+
+</p>
+
+<h2>
+
+    Isso é uma mentira
+
+</h2>
+
+<p>
+    
+    Todos estão salvos
+
+</p> 
+
+<h2>
+    
+    Esse é o meu parágrafo de 2 linhas
+
+</h2>
+
+<p>
+    Essa é a 1ª linha
+    
+    <br>
+   
+    Essa é a 2ª linha
+
+</p>
+
+<h2>
+    
+    Meu formulário
+
+</h2>
+
+<p>
+    
+    Preencha as informações abaixo
+
+</p>
+
+<form 
+    id="formRegister">
+    
+    Nome: 
+        <input 
+            id="idName" 
+            type="text" 
+            placeholder="Digite seu nome completo" />
+            
+    <br> 
+    
+    Email: 
+        <input 
+            id="idEmail" 
+            type="email" 
+            placeholder="Digite o seu melhor email" />
+    <br>
+    
+    Senha: 
+        <input 
+            id="idPassword" 
+            type="password" 
+            placeholder="Letra maiúscula e números" />
+    <br>
+  
+    Data de nascimento: 
+        <input 
+            id="idDate" 
+            type="date" />
+
+    <button 
+        type="submit">
+        
+        Salvar
+    
+    </button>
+
+</form>
+
+<h2> 
+    
+    Resposta
+
+</h2>
+
+<pre
+    id="idResponse">
+
+</pre>
+
+<script>
+     //document é a página toda
+    //get= pegar, elemento= elemento do html
+    
+    var formR = document.getElementById("formRegister")
+        //adicionando escutar o evento
+    
+        formR.addEventListener("submit", (e)=>{
+            e.preventDefault() //impede atualizar a tela
+
+            let name= document.getElementById("idName").value
+            let email= document.getElementById("idEmail").value
+            let password= document.getElementById("idPassword").value
+            let date= document.getElementById("idDate").value
+
+            const user = { //objeto anônimo, estrutura, json
+                nome: name,
+                email: email,
+                senha: password,
+                nascimento: date
+         
+            }
+            let response = document.getElementById("idResponse")
+            response.innerHTML = JSON.stringify(user, null, 4)
+        })
+
+</script>
