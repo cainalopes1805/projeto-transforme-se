@@ -1,98 +1,121 @@
-<body>
-
-    <head>
+<head>
+    
+    <title>
         
-        <title>
-            
-            Aula 5
+        Aula 5
 
-        </title>
-        
-        <link 
-            rel="preconnect" href="https://fonts.googleapis.com">
+    </title>
+    
+    <link 
+        rel="preconnect" href="https://fonts.googleapis.com">
 
-        <link 
-            rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-        <link
-            rel = "stylesheet"
-            href = "style.css">
+    <link
+        rel = "stylesheet"
+        href = "style.css">
 
-    </head>
+</head>
 
-    <h2>
-        
+<body class = "bg-white ml-4 mt-4">
+
+    <div class = "h-full flex">
+
+        <div 
+            id = "idModalRegister"
+            class = "fixed bottom-3 p-5 bg-primary rounded-lg shadow-md column hidden">
+
+            <h2>
+                
+                <pre
+                    id = "idUsuario">
+
+                </pre>
+
+            </h2>
+
+            <h2>
+
+                Cadastro
+
+            </h2>
+
+            <p>
+
+                Preencha os campos abaixo
+
+            </p>
+
+            <form 
+                id = "idFormRegister">
+
+                Nome:
+                    <input 
+                        id = "idRegName" 
+                        type = "text" 
+                        placeholder = "Digite seu nome completo" />
+
+                <br>
+
+                Email:
+                    <input 
+                        id = "idRegEmail" 
+                        type = "email" 
+                        placeholder = "Digite o seu melhor email" />
+                <br>
+
+                Senha:
+                    <input 
+                        id = "idRegPassword" 
+                        type = "password" 
+                        placeholder = "Letra maiúscula e números" />
+                <br>
+
+                Data de nascimento:
+                    <input 
+                        id = "idRegDate" 
+                        type = "date" />
+
+                <br><br>
+
+                <button
+                    type = "submit">
+
+                    Cadastrar
+
+                </button>
+
+            </form>
+
+        </div>
+
         <pre
-            id = "idUsuario">
+            id = "idUsuarios">
 
         </pre>
+        
+    </div>
 
-    </h2>
+    <a 
+        id = "idAddUser"
+        class = "rounded-full bg-secondary hover:bg-terciary hover:c-white m-4 px-6 py-4 fs-12 fixed bottom-0 right-0">
 
-    <h2>
+        +
 
-        Cadastro
+    </a>
 
-    </h2>
-
-    <p>
-
-        Preencha os campos abaixo
-
-    </p>
-
-    <form 
-        id = "idFormRegister">
-
-        Nome:
-            <input 
-                id = "idRegName" 
-                type = "text" 
-                placeholder = "Digite seu nome completo" />
-
-        <br>
-
-        Email:
-            <input 
-                id = "idRegEmail" 
-                type = "email" 
-                placeholder = "Digite o seu melhor email" />
-        <br>
-
-        Senha:
-            <input 
-                id = "idRegPassword" 
-                type = "password" 
-                placeholder = "Letra maiúscula e números" />
-        <br>
-
-        Data de nascimento:
-            <input 
-                id = "idRegDate" 
-                type = "date" />
-
-        <br><br>
-
-        <button
-            type = "submit">
-
-            Cadastrar
-
-        </button>
-
-    </form>
-
-    <pre
-        id = "idUsuarios">
-
-    </pre>
-    
 </body>
 
 <script
     src = "user.js">
+
+</script>
+
+<script
+    src = "auth.js">
 
 </script>

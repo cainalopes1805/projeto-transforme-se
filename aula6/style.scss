@@ -63,9 +63,26 @@ $pixels: (
     3: 8px,
     4: 16px,
     5: 32px,
-    6: 64px
+    6: 64px,
+    7: 128px,
+    7a: 160px,
+    7b: 180px,
+    8: 256px,
+    9: 512px,
+    10: 1024px
+
 );
 
+$n: (
+
+    0: 0,
+    1: 100,
+    2: 200,
+    3: 300,
+    4: 400,
+    5: 500
+    
+);
 
 $radius: (
     default: 4px,
@@ -97,6 +114,11 @@ $font-size: (
     }
 };
 
+@each $name, $value in $n {
+    .bottom-#{$name} {
+        bottom: $value;
+    }
+};
 
 $shadows: (
     default: 0 1px 3px rgba(0, 0, 0, 0.15),
@@ -165,6 +187,10 @@ a {
 
 .max-w-md {
     max-width: 500px;
+}
+
+.min-w-md {
+    min-width: 205px;
 }
 
 
@@ -337,6 +363,9 @@ $text-alignments: (
     }
 }
 
+.bg-terciary {
+  background-color: #084b0f;
+}
 
 .w-full {
     width: 100%;
@@ -472,6 +501,13 @@ $gaps: (
     transform: scale(1.05);
 }
 
+.hover\:c-white:hover {
+    color: #fefefe;
+}
+
+.hover\:bg-terciary:hover {
+    background-color: #014e05;
+}
 
 .active\:scale-95:active {
     transform: scale(0.95);
@@ -556,4 +592,18 @@ $gaps: (
 
 .z-50 {
     z-index: 50;
+}
+
+
+
+.column {
+
+    flex-direction: column;
+
+}
+
+.hidden {
+
+    display: none;
+
 }
