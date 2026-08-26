@@ -21,94 +21,147 @@
 
 </head>
 
-<body class = "bg-white ml-4 mt-4">
+<body class = "bg-white">
 
-    <div class = "h-full flex">
+    <div class = "text-center">
+    
+        <h2 class = "flex max-w-md mx-auto px-5 py-4 bg-terciary text-white text-center rounded-full mt-3 shadow-md column">
+            
+            <pre
+                id = "idUsuario"
+                class = "mt-0 mb-0 flex justify-center">
 
-        <div 
-            id = "idModalRegister"
-            class = "fixed bottom-3 p-5 bg-primary rounded-lg shadow-md column hidden">
+            </pre>
 
-            <h2>
+        </h2>
+
+    </div>
+
+    <div 
+        id = "idModalRegister"
+        class = "fixed top-0 right-0 bottom-0 left-0 hidden items-center justify-center bg-green-50 z-50">
+
+        <div class = "relative max-w-md w-full p-5 bg-primary rounded-lg shadow-md flex column">
+
+            <h3 
+                id = "idClose"
+                class = "mb-0 bg-secondary absolute top-0 text-dark rounded-full px-3 py-2 fs-8 right-0 mr-3 hover:text-white hover:bg-terciary">
                 
-                <pre
-                    id = "idUsuario">
+                X
+            
+            </h3>
 
-                </pre>
+            <div>
 
-            </h2>
+                <form>
 
-            <h2>
+                    <h1 class = "text-center mt-0 text-dark">
 
-                Cadastro
+                    Cadastro
 
-            </h2>
+                    </h1>
 
-            <p>
+                    <p class = "text-center text-dark">
 
-                Preencha os campos abaixo
+                        Preencha os campos abaixo
 
-            </p>
+                    </p>                    
 
-            <form 
-                id = "idFormRegister">
+                    <table class = "pb-5 mx-auto text-dark">
 
-                Nome:
-                    <input 
-                        id = "idRegName" 
-                        type = "text" 
-                        placeholder = "Digite seu nome completo" />
+                        <tr>
 
-                <br>
+                            <td>Nome:</td>
+                            
+                            <td><input 
+                                id = "idRegName" 
+                                type = "text" 
+                                placeholder = "Digite seu nome completo"
+                                class = "rounded-xl pl-4 pr-6 py-3 hover:bg-secondary"
+                                style = "border-width: 1; border-style: solid;"
+                                required /></td>
 
-                Email:
-                    <input 
-                        id = "idRegEmail" 
-                        type = "email" 
-                        placeholder = "Digite o seu melhor email" />
-                <br>
+                        </tr>
+                        <tr>
+                            
+                            <td>Email:</td>
+                            <td><input 
+                                id = "idRegEmail" 
+                                type = "email" 
+                                placeholder = "Digite o seu melhor email"
+                                class = "rounded-xl pl-4 pr-6 py-3 hover:bg-secondary"
+                                style = "border-width: 1; border-style: solid;"
+                                required /></td>
 
-                Senha:
-                    <input 
-                        id = "idRegPassword" 
-                        type = "password" 
-                        placeholder = "Letra maiúscula e números" />
-                <br>
+                        </tr>
+                        <tr>
+                            
+                            <td>Senha:</td>
+                            <td><input 
+                                id = "idRegPassword" 
+                                type = "password" 
+                                placeholder = "Letra maiúscula e números"
+                                class = "rounded-xl py-3 pl-4 pr-6 hover:bg-secondary"
+                                style = "border-width: 1; border-style: solid"
+                                required/></td>
 
-                Data de nascimento:
-                    <input 
-                        id = "idRegDate" 
-                        type = "date" />
+                        </tr>
+                        <tr class = "text-right">
 
-                <br><br>
+                            <td>Data de nascimento:</td>
+                            <td><input 
+                                id = "idRegDate" 
+                                type = "date"
+                                class = "rounded-xl py-3 px-6 hover:bg-secondary"
+                                style = "border-width: 1; border-style: solid;"
+                                required /></td>
 
-                <button
-                    type = "submit">
+                        </tr>
+
+                    </table>                             
+
+                </form>
+                <a 
+                    id = "idFormRegister"
+                    class = "flex justify-center text-center  py-3 bg-terciary text-white rounded-full shadow-1 hover:bg-white hover:text-dark mt-0">
 
                     Cadastrar
 
-                </button>
+                </a> 
 
-            </form>
+            </div>
 
         </div>
 
-        <pre
-            id = "idUsuarios">
-
-        </pre>
-        
     </div>
+
 
     <a 
         id = "idAddUser"
-        class = "rounded-full bg-secondary hover:bg-terciary hover:c-white m-4 px-6 py-4 fs-12 fixed bottom-0 right-0">
+        class = "rounded-full bg-primary hover:bg-terciary hover:c-white m-4 px-6 py-4 fs-12 fixed bottom-0 right-0">
 
         +
 
     </a>
 
 </body>
+
+<table>
+
+    <thead>
+
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Senha</th>
+
+    </thead>
+    <tbody id = "idListUsers">
+
+
+
+    </tbody>
+
+</table>
 
 <script
     src = "user.js">

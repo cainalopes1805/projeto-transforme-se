@@ -941,6 +941,10 @@ a {
   background-color: #314141;
 }
 
+.bg-green-50 {
+  background-color: rgba(0, 53, 3, 0.5);
+}
+
 .hover\:bg-primary:hover {
   background-color: #46b350;
 }
@@ -967,6 +971,10 @@ a {
 
 .hover\:bg-prices:hover {
   background-color: #314141;
+}
+
+.hover\:bg-green-50:hover {
+  background-color: rgba(0, 53, 3, 0.5);
 }
 
 .focus\:bg-primary:focus {
@@ -997,6 +1005,10 @@ a {
   background-color: #314141;
 }
 
+.focus\:bg-green-50:focus {
+  background-color: rgba(0, 53, 3, 0.5);
+}
+
 .active\:bg-primary:active {
   background-color: #46b350;
 }
@@ -1023,6 +1035,10 @@ a {
 
 .active\:bg-prices:active {
   background-color: #314141;
+}
+
+.active\:bg-green-50:active {
+  background-color: rgba(0, 53, 3, 0.5);
 }
 
 .text-white {
@@ -1325,6 +1341,15 @@ a {
 
 .hidden {
   display: none;
+}
+
+.bg-green {
+  background-color: #2a8d34;
+}
+
+.shadow-md {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

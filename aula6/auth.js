@@ -6,3 +6,12 @@ btAddUser?.addEventListener("click", (e) => {
     modalRegister.classList.add("flex")
 
 });
+
+const btClose = document.getElementById("idClose");
+btClose?.addEventListener("click", (e) => {
+
+    const modalRegister = document.getElementById("idModalRegister");
+    modalRegister.classList.add("hidden");
+    modalRegister.classList.remove("flex")
+
+});

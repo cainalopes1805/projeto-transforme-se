@@ -2,6 +2,14 @@ var users = JSON.parse(localStorage.getItem("users")) || []
 var logado = JSON.parse(localStorage.getItem("logado")) || {}
 var hello = document.getElementById("idUsuario")
 
+var listUsers = document.getElementById("listUsers")
+
+if(listUsers) {
+
+    users.forEach()
+
+}
+
 if(hello && logado){
     
     hello.innerHTML = "Olá, " + logado.nome
@@ -61,7 +69,7 @@ if (formReg) {
     let response = document.getElementById("idUsuarios")
     response.innerHTML = JSON.stringify(users, null, 1)
 
-    formReg.addEventListener("submit", (e) => {
+    formReg.addEventListener("click", (e) => {
 
 
 
@@ -99,6 +107,8 @@ if (formReg) {
             console.log("Usuário já cadastrado")
 
         }
+
+        window.location.href = "auth.html"
 
     })
 }
