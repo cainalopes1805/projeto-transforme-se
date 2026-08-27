@@ -1,148 +1,83 @@
-<body
-    class = "bg-primary h-full">
+<body class="bg-primary h-full">
 
-        <head>
-            
-            <title>
-                
-                Aula 6
+    <head>
 
-            </title>
+        <title>
 
-            <link
-                rel = "stylesheet"
-                href = "style.css">
+            Aula 6
 
-        </head>
+        </title>
 
-        <section>
+        <link rel="stylesheet" href="style.css">
 
-                    <div
-                        class = "max-w-md mx-auto py-8">
+    </head>
 
-                            <form 
-                                class = "rounded-xl bg-white shadow text-center mb-0 py-5">
+    <section>
 
-                                    
-                                        <a href = "index.html"
-                                            class = "ml-0 hover:bg-primary rounded-full py-2 px-3">
-                                            
-                                            Voltar
-                                        
-                                        </a>
+        <div class="flex fixed top-0 right-0 bottom-0 left-0 items-center justify-center">
 
+            <div class="relative max-w-md w-full p-5 bg-white rounded-lg shadow-md flex column">
 
-                                    <div>
-                                        
-                                        <h1
-                                            class = "mx-auto my-0"
-                                            style = "font-size: 60;">
+                <h3 href="index.html"
+                    class="mb-0 bg-terciary absolute top-0 text-white rounded-full px-3 py-2 fs-8 right-0 mr-3 hover:text-dark hover:bg-white cursor-pointer">
 
-                                                Login
+                    Voltar
 
-                                        </h1>
+                </h3>
 
-                                    </div>
+                <div>
 
-                                    <table class = "mx-auto mb-5">
+                    <form>
 
-                                        <tr>
+                        <h1 class="text-center mt-0 text-dark">
 
-                                            <article
-                                                style="font-size: 30;"
-                                            >
+                            Login
 
-                                                <div 
-                                                    class = "flex items-center mx-6 gap-2"
-                                                >         
-                                                
-                                                    <td>
-                                                    
-                                                        <div> 
-                                                            Email
-                                                        </div>
+                        </h1>
 
-                                                    </td>
+                        <p class="text-center text-dark">
 
-                                                    <td>
+                            Preencha os campos abaixo
 
-                                                        <input 
-                                                            id = "idLogEmail" 
-                                                            type = "email" 
-                                                            placeholder = "Digite o email cadastrado" 
-                                                            class = "rounded-xl py-3 px-6 hover:bg-secondary"
-                                                            style = "border-width: 1; border-style: solid;"
-                                                        />
+                        </p>
 
-                                                    </td>
-
-                                                </div>
-                                            </article>
-
-                                        </tr>
-
-                                        <tr>
-
-                                     <article
-                                   
-                                        style="font-size: 30;"
-                                    >
-                                        <div 
-                                            class = "flex items-center mx-6 gap-2 mb-5"
-                                        >         
-                                        
-                                            <td>
-
-                                                <div> 
-                                                    Senha
-                                                </div>
-
-                                            </td>
-
-                                            <td>
-
-                                                <input 
-                                                    id = "idLogPassword" 
-                                                    type = "password" 
-                                                    placeholder = "Digite sua senha" 
-                                                    class = "rounded-xl py-3 px-6 hover:bg-secondary"
-                                                    style = "border-width: 1; border-style: solid;"
-                                                />
-
-                                            </td>
-
-                                        </div>
-
-                                    </article>
-
-                                        </tr>
-
-                                    </table>
-                                
-                                <a
-                                    id = "idFormLogin"
-                                    class = "px-7b text-center py-3 bg-primary rounded-full shadow-1 hover:bg-terciary hover:c-white mt-5">
+                        <table class="p-4 bg-terciary rounded-lg mx-auto text-white shadow-md">
+                            <tr>
+                                <td>Email:</td>
+                                <td><input id="idLogEmail" type="email" placeholder="Digite o email cadastrado"
+                                        class="rounded-xl py-3 px-6 hover:bg-secondary"
+                                        style="border-width: 1; border-style: solid;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Senha:</td>
+                                <td><input id="idLogPassword" type="password" placeholder="Digite sua senha"
+                                        class="rounded-xl py-3 px-6 hover:bg-secondary"
+                                        style="border-width: 1; border-style: solid;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pt-4" colspan="2">
+                                    <a id="idFormLogin"
+                                        class="flex justify-center text-center bg-primary py-3 text-white rounded-full shadow-md hover:bg-white hover:text-dark cursor-pointer">
 
                                         Entrar
 
-                                </a>                              
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <pre id="idResponse" class="mt-5 mb-0 text-center">
 
-                            </form>
-
-                            <pre
-                                id = "idResponse"
-                                class = "mt-5 mb-0 text-center">
-
-                            </pre>
-
-                    </div>
-
-        </section>
-    
+        </pre>
+    </section>
 </body>
 
 
-<script 
-    src = "user.js">
+<script src="user.js">
 
 </script>

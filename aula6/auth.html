@@ -23,15 +23,26 @@
 
 <body class = "bg-white">
 
+    
+    <a 
+        href = "login.html"
+        class = "rounded-full bg-primary hover:bg-terciary hover:c-white m-4 px-4 py-3 fs-8 fixed top-0 left-0 shadow-md">
+        
+        Voltar
+    
+    </a>
+
+
     <div class = "text-center">
     
-        <h2 class = "flex max-w-md mx-auto px-5 py-4 bg-terciary text-white text-center rounded-full mt-3 shadow-md column">
-            
-            <pre
-                id = "idUsuario"
-                class = "mt-0 mb-0 flex justify-center">
-
-            </pre>
+        <table class = "max-w-md mx-auto bg-terciary text-center text-white rounded-full py-3 px-5 mt-5 fs-12 shadow-md">
+            <tr>
+                <td
+                    id = "idUsuario"
+                    class = "mt-0 mb-0 flex justify-center">
+                </td>
+            </tr>
+        </table>
 
         </h2>
 
@@ -45,7 +56,7 @@
 
             <h3 
                 id = "idClose"
-                class = "mb-0 bg-secondary absolute top-0 text-dark rounded-full px-3 py-2 fs-8 right-0 mr-3 hover:text-white hover:bg-terciary">
+                class = "mb-0 bg-terciary absolute top-0 text-white rounded-full px-3 py-2 fs-8 right-0 mr-3 hover:text-dark hover:bg-white cursor-pointer">
                 
                 X
             
@@ -67,7 +78,7 @@
 
                     </p>                    
 
-                    <table class = "pb-5 mx-auto text-dark">
+                    <table class = "p-4 bg-terciary rounded-lg mx-auto text-white shadow-md">
 
                         <tr>
 
@@ -112,22 +123,28 @@
                             <td><input 
                                 id = "idRegDate" 
                                 type = "date"
-                                class = "rounded-xl py-3 px-6 hover:bg-secondary"
+                                class = "rounded-xl py-3 px-6 hover:bg-secondary cursor-pointer"
                                 style = "border-width: 1; border-style: solid;"
                                 required /></td>
 
                         </tr>
+                        <tr>
+                            <td
+                                class = "pt-4"
+                                colspan = "2">
+                                <a 
+                                    id = "idFormRegister"
+                                    class = "flex justify-center text-center bg-primary py-3 text-white rounded-full shadow-md hover:bg-white hover:text-dark cursor-pointer">
 
+                                    Cadastrar
+
+                                </a>
+                            </td> 
+                        </tr>
                     </table>                             
 
                 </form>
-                <a 
-                    id = "idFormRegister"
-                    class = "flex justify-center text-center  py-3 bg-terciary text-white rounded-full shadow-1 hover:bg-white hover:text-dark mt-0">
-
-                    Cadastrar
-
-                </a> 
+                
 
             </div>
 
@@ -138,7 +155,7 @@
 
     <a 
         id = "idAddUser"
-        class = "rounded-full bg-primary hover:bg-terciary hover:c-white m-4 px-6 py-4 fs-12 fixed bottom-0 right-0">
+        class = "rounded-full bg-primary hover:bg-terciary hover:c-white m-4 px-5 py-4 fs-12 fixed bottom-0 right-0 shadow-md cursor-pointer">
 
         +
 
@@ -146,21 +163,17 @@
 
 </body>
 
-<table>
+<table class = "mx-auto mt-6 bg-terciary p-4 rounded-xl shadow-md">
+    <thead class = "bg-primary text-dark">
 
-    <thead>
-
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Senha</th>
+        <th class = "px-4 py-2 rounded">Nome</th>
+        <th class = "px-4 py-2 rounded">Email</th>
+        <th class = "px-4 py-2 rounded">Ações</th>
 
     </thead>
     <tbody id = "idListUsers">
 
-
-
     </tbody>
-
 </table>
 
 <script

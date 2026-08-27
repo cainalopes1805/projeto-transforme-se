@@ -106,7 +106,25 @@ $font-size: (
     9: 18px,
     10: 20px,
     11: 22px,
-    12: 24px
+    12: 24px,
+    13: 26px,
+    14: 28px,
+    15: 30px,
+    16: 32px,
+    17: 34px,
+    18: 36px,
+    19: 38px,
+    20: 40px,
+    21: 42px,
+    22: 44px,
+    23: 46px,
+    24: 48px,
+    25: 50px,
+    26: 52px,
+    27: 54px,
+    28: 56px,
+    29: 58px,
+    30: 60px
 );
 
 @each $name, $value in $font-size {
@@ -610,10 +628,64 @@ $gaps: (
 }
 
 .bg-green {
-  background-color: #2a8d34;
+    background-color: #2a8d34;
 }
 
 .shadow-md {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.50);
+}
+/*
+td, th {
+
+    padding: 8px;
+    text-align: left;
+    border-radius: 12px;
+    justify-content: left;
+
+}
+
+th {
+
+    font-family: "Roboto", sans-serif;
+    background-color: #eef1f5;
+
+}
+
+td {
+    
+    font-family: "Lucida Sans", Verdana, sans-serif;
+    color: #fefefe;
+    background-color: #033a07;
+
+}
+*/
+$fonts: (
+
+    "primary": $font-primary,
+    "secondary": $font-secondary,
+    "terciary": $font-terciary
+
+);
+
+@each $name, $font in $fonts {
+
+    .font-#{$name}{
+
+        font-family: $font;
+
+    }
+
+}
+
+.font-primary {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Lucida Sans", Verdana, sans-serif;
+}
+
+.font-terciary {
+  font-family: "Fleur De Leah", cursive;
 }
