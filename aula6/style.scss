@@ -45,7 +45,8 @@ $backgrounds: (
     "about": $color-about,
     "features": $color-features,
     "prices": $color-prices,
-    "green-50": rgba(0, 53, 3, 0.5)
+    "green-50": rgba(0, 53, 3, 0.5),
+    "red": rgb(197, 7, 7)
 );
 
 $text-colors: (
@@ -688,4 +689,28 @@ $fonts: (
 
 .font-terciary {
   font-family: "Fleur De Leah", cursive;
+}
+
+.bg-darkBlue {
+  background-color: #0e0e0f;
+}
+
+.bg-green-50 {
+  background-color: rgba(7, 7, 7, 0.555);
+}
+
+.bg-darkBlue {
+  background-color: #0e0e0f;
+}
+
+.gap-9 {
+  gap: 64px;
+}
+
+.text-darkBlue {
+  color: #0e0e0f;
+}
+
+.hover\:text-terciary:hover {
+  color: #014e05;
 }

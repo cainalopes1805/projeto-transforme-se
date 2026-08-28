@@ -2,69 +2,73 @@ var users = JSON.parse(localStorage.getItem("users")) || []
 var logado = JSON.parse(localStorage.getItem("logado")) || {}
 var hello = document.getElementById("idUsuario")
 
+/*function name(parametro1, p2){
+    return
+}*/
+
+function createButton(text, classes, i){
+    let bt = document.createElement("a");
+    bt.innerHTML = text;
+
+    classes.forEach((c) => {
+        bt.classList.add(c);
+    })
+
+    bt.classList.add("cursor-pointer");
+    bt.classList.add("bg-primary");
+    bt.classList.add("rounded-full");
+    bt.classList.add("m-2");
+    bt.classList.add("py-2");
+    bt.classList.add("px-3");
+    bt.classList.add("fs-7");
+    bt.classList.add("hover:text-white");
+    bt.classList.add("hover:bg-terciary");
+    bt.classList.add("shadow-md");
+    bt.dataset.id = i;
+    return bt;
+}
+
 var idListUsers = document.getElementById("idListUsers")
 
 if(idListUsers) {
     let i = 0;
-    users.forEach( (u) => {
+    users.forEach((u) => {
 
         let tdName = document.createElement("td");
         tdName.innerHTML = u.nome;
-        tdName.classList.add("p-3");
+        tdName.classList.add("p-4");
         tdName.classList.add("rounded");
-        tdName.classList.add("bg-secondary");
-        tdName.classList.add("text-dark");
+        tdName.classList.add("bg-darkBlue");
+        tdName.classList.add("text-white");
 
         let tdEmail = document.createElement("td");
         tdEmail.innerHTML = u.email;
-        tdEmail.classList.add("p-3");
+        tdEmail.classList.add("p-4");
         tdEmail.classList.add("rounded");
-        tdEmail.classList.add("bg-secondary");
-        tdEmail.classList.add("text-dark");
+        tdEmail.classList.add("bg-darkBlue");
+        tdEmail.classList.add("text-white");
 
         let tdAction = document.createElement("td");
-        tdAction.classList.add("p-3");
+        tdAction.classList.add("py-4");
+        tdAction.classList.add("px-4");
         tdAction.classList.add("rounded");
-        tdAction.classList.add("bg-secondary");
-        tdAction.classList.add("text-dark");
+        tdAction.classList.add("bg-darkBlue");
+        tdAction.classList.add("text-darkBlue");
         tdAction.classList.add("text-center");
 
-        let btV = document.createElement("a");
-        btV.innerHTML = "V";
-        btV.classList.add("show");
-        btV.classList.add("cursor-pointer");
-        btV.classList.add("bg-terciary");
-        btV.classList.add("rounded-full");
-        btV.classList.add("m-2");
-        btV.classList.add("py-2");
-        btV.classList.add("px-3");
-        btV.classList.add("fs-7");
-        btV.classList.add("text-white");
-        btV.classList.add("hover:text-dark");
-        btV.classList.add("hover:bg-white");
-        btV.id = i;
-        tdAction.appendChild(btV);
+        tdAction.appendChild(
+            createButton("V", ["show"], i)
+            
+        ); 
 
         let span = document.createElement("span");
-        span.innerHTML = "-";
+        span.innerHTML = "---------";
+        
         tdAction.appendChild(span);
 
-        let btX = document.createElement("a");
-        btX.innerHTML = "X";
-        btX.classList.add("remove");
-        btX.classList.add("cursor-pointer");
-        btX.classList.add("bg-terciary");
-        btX.classList.add("rounded-full");
-        btX.classList.add("m-2");
-        btX.classList.add("py-2");
-        btX.classList.add("px-3");
-        btX.classList.add("fs-7");
-        btX.classList.add("text-white");
-        btX.classList.add("hover:text-dark");
-        btX.classList.add("hover:bg-white");
-        btX.id = i;
-        tdAction.appendChild(btX);
-
+           tdAction.appendChild(
+            createButton("X", ["bg-red", "text-white", "remove"], i)
+        ); 
 
         let tr = document.createElement("tr");
         tr.classList.add("bg-terciary");
@@ -84,9 +88,21 @@ if(idListUsers) {
 var botoesV = document.querySelectorAll(".show")
 botoesV.forEach((b) => {
     b.addEventListener("click", () => {
-        const id = b.id;
+        const id = b.dataset.id;
         b.innerHTML = users[id].nascimento;
-    })
+    });
+})
+
+var botoesX = document.querySelectorAll(".remove")
+botoesX.forEach((b) => {
+    b.addEventListener("click", () => {
+        const id = b.dataset.id;
+        users.splice(id, 1); 
+
+        localStorage.setItem("users", JSON.stringify(users));
+        window.location.href = "auth.html";
+
+    });
 })
 
 if(hello && logado){
@@ -118,13 +134,13 @@ if (formLog) {
 
             console.log("Usuário não encontrado")
             response.innerHTML = "Usuário não encontrado"
+            alert("Usuário não encontrado")
 
         }
 
         if (user.senha == password) {
 
             localStorage.setItem("logado", JSON.stringify(user))
-
             window.location.href = "auth.html"
 
         }
@@ -132,8 +148,8 @@ if (formLog) {
         else {
 
             console.log("Senha inválida")
-
             response.innerHTML = "Senha inválida"
+            alert("Senha inválida")
 
         }
 

@@ -21,7 +21,7 @@
 
 </head>
 
-<body class = "bg-white">
+<body class = "bg-darkBlue">
 
     
     <a 
@@ -35,7 +35,7 @@
 
     <div class = "text-center">
     
-        <table class = "max-w-md mx-auto bg-terciary text-center text-white rounded-full py-3 px-5 mt-5 fs-12 shadow-md">
+        <table class = "max-w-md mx-auto bg-primary text-center text-dark rounded-full py-3 px-5 mt-5 fs-12 shadow-md">
             <tr>
                 <td
                     id = "idUsuario"
@@ -88,8 +88,8 @@
                                 id = "idRegName" 
                                 type = "text" 
                                 placeholder = "Digite seu nome completo"
-                                class = "rounded-xl pl-4 pr-6 py-3 hover:bg-secondary"
-                                style = "border-width: 1; border-style: solid;"
+                                class = "rounded-xl pl-4 pr-6 py-3 hover:bg-white bg-darkBlue text-primary"
+                                style = "border-width: 0; border-style: solid;"
                                 required /></td>
 
                         </tr>
@@ -100,8 +100,8 @@
                                 id = "idRegEmail" 
                                 type = "email" 
                                 placeholder = "Digite o seu melhor email"
-                                class = "rounded-xl pl-4 pr-6 py-3 hover:bg-secondary"
-                                style = "border-width: 1; border-style: solid;"
+                                class = "rounded-xl pl-4 pr-6 py-3 hover:bg-white bg-darkBlue text-primary"
+                                style = "border-width: 0; border-style: solid;"
                                 required /></td>
 
                         </tr>
@@ -112,8 +112,8 @@
                                 id = "idRegPassword" 
                                 type = "password" 
                                 placeholder = "Letra maiúscula e números"
-                                class = "rounded-xl py-3 pl-4 pr-6 hover:bg-secondary"
-                                style = "border-width: 1; border-style: solid"
+                                class = "rounded-xl py-3 pl-4 pr-6 hover:bg-white bg-darkBlue text-primary"
+                                style = "border-width: 0; border-style: solid"
                                 required/></td>
 
                         </tr>
@@ -123,8 +123,8 @@
                             <td><input 
                                 id = "idRegDate" 
                                 type = "date"
-                                class = "rounded-xl py-3 px-6 hover:bg-secondary cursor-pointer"
-                                style = "border-width: 1; border-style: solid;"
+                                class = "rounded-xl py-3 px-6 hover:bg-white cursor-pointer bg-darkBlue text-primary"
+                                style = "border-width: 0; border-style: solid;"
                                 required /></td>
 
                         </tr>
@@ -134,7 +134,7 @@
                                 colspan = "2">
                                 <a 
                                     id = "idFormRegister"
-                                    class = "flex justify-center text-center bg-primary py-3 text-white rounded-full shadow-md hover:bg-white hover:text-dark cursor-pointer">
+                                    class = "flex justify-center text-center bg-primary py-3 text-dark rounded-full shadow-md hover:bg-white hover:text-dark cursor-pointer">
 
                                     Cadastrar
 
@@ -155,7 +155,7 @@
 
     <a 
         id = "idAddUser"
-        class = "rounded-full bg-primary hover:bg-terciary hover:c-white m-4 px-5 py-4 fs-12 fixed bottom-0 right-0 shadow-md cursor-pointer">
+        class = "rounded-full bg-primary hover:bg-terciary hover:text-white m-4 px-5 py-4 fs-12 fixed bottom-0 right-0 shadow-md cursor-pointer">
 
         +
 
@@ -163,13 +163,13 @@
 
 </body>
 
-<table class = "mx-auto mt-6 bg-terciary p-4 rounded-xl shadow-md">
+<table class = "mx-auto mt-6 bg-primary p-2 rounded-lg shadow-md">
     <thead class = "bg-primary text-dark">
-
-        <th class = "px-4 py-2 rounded">Nome</th>
-        <th class = "px-4 py-2 rounded">Email</th>
-        <th class = "px-4 py-2 rounded">Ações</th>
-
+        <tr>
+        <td class = "px-4 py-2 rounded text-center">Nome</td>
+        <td class = "px-4 py-2 rounded text-center">Email</td>
+        <td class = "px-4 py-2 rounded text-center">Ações</td>
+        </tr>
     </thead>
     <tbody id = "idListUsers">
 

@@ -1017,6 +1017,10 @@ a {
   background-color: rgba(0, 53, 3, 0.5);
 }
 
+.bg-red {
+  background-color: rgb(197, 7, 7);
+}
+
 .hover\:bg-primary:hover {
   background-color: #46b350;
 }
@@ -1047,6 +1051,10 @@ a {
 
 .hover\:bg-green-50:hover {
   background-color: rgba(0, 53, 3, 0.5);
+}
+
+.hover\:bg-red:hover {
+  background-color: rgb(197, 7, 7);
 }
 
 .focus\:bg-primary:focus {
@@ -1081,6 +1089,10 @@ a {
   background-color: rgba(0, 53, 3, 0.5);
 }
 
+.focus\:bg-red:focus {
+  background-color: rgb(197, 7, 7);
+}
+
 .active\:bg-primary:active {
   background-color: #46b350;
 }
@@ -1111,6 +1123,10 @@ a {
 
 .active\:bg-green-50:active {
   background-color: rgba(0, 53, 3, 0.5);
+}
+
+.active\:bg-red:active {
+  background-color: rgb(197, 7, 7);
 }
 
 .text-white {
@@ -1471,6 +1487,30 @@ td {
 
 .font-terciary {
   font-family: "Fleur De Leah", cursive;
+}
+
+.bg-darkBlue {
+  background-color: #0e0e0f;
+}
+
+.bg-green-50 {
+  background-color: rgba(7, 7, 7, 0.555);
+}
+
+.bg-darkBlue {
+  background-color: #0e0e0f;
+}
+
+.gap-9 {
+  gap: 64px;
+}
+
+.text-darkBlue {
+  color: #0e0e0f;
+}
+
+.hover\:text-terciary:hover {
+  color: #014e05;
 }
 
 /*# sourceMappingURL=style.css.map */

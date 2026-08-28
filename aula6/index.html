@@ -16,25 +16,25 @@
     
     <body>
         
-        <div  class = "flex items-center absolute px-4 py-3 fixed top-0 w-full shadow bg-white text-center">
+        <div  class = "flex items-center absolute px-4 py-4 fixed top-0 w-full shadow bg-darkBlue text-center">
                 
-            <nav> <!-- Navigation tem os navegadores, menus e botões -->
+            <nav class = "text-primary"> <!-- Navigation tem os navegadores, menus e botões -->
 
                         <a 
                             id = "idMenuAbout"
                             href = "#idAbout"
-                            class = "p-3 rounded-xl hover:bg-primary">
+                            class = "p-3 rounded-xl hover:bg-white hover:text-dark text-primary m-2">
                             
                             Sobre
                         
                         </a>
 
                         |
-
+                        
                         <a 
                             id = "idMenuPrices"
                             href = "#idPrices"
-                            class = "p-3 rounded-xl hover:bg-primary">
+                            class = "p-3 rounded-xl hover:bg-white hover:text-dark text-primary m-2">
                             
                             Planos
                         
@@ -45,7 +45,7 @@
                         <a 
                             id = "idMenuFeatures"
                             href = "#idFeatures"
-                            class = "p-3 rounded-xl hover:bg-primary">
+                            class = "p-3 rounded-xl hover:bg-white hover:text-dark text-primary m-2">
                             
                             Benefícios
                         
@@ -54,33 +54,33 @@
             </nav>
                         
                     <div class = "ml-auto mr-7a fs-10">
-                        
-                            <h1 class = "font-terciary my-0 text-center">
+                        <a href = "index.html">
+                            <h1 class = "font-terciary my-0 text-center text-primary">
 
                                 Nutri-Connect
 
                             </h1>
-
+                        </a>
                     </div>
 
                     <a 
                         id = "idMenuLogin"
                         href = "login.html"
-                        class = "px-4 py-2 bg-green rounded shadow-lg mr-5 ml-auto hover:bg-primary">
+                        class = "px-4 py-3 bg-primary rounded-full shadow-lg mr-5 ml-auto hover:bg-white hover:text-dark">
                         
                         Acessar
                     
                     </a>
 
         </div>
-
         <main> <!-- Principal -->
                        
             <section
-                id = "idAbout">
+                id = "idAbout"
+                class = "bg-white">
 
                     <div
-                        class = "max-w-lg mx-auto py-6">
+                        class = "max-w-lg mx-auto pb-6 pt-7">
                 
                             <h2
                                 id = "idAboutAncoras"
@@ -99,7 +99,7 @@
                                 <a 
                                     id = "idAboutAncoras"
                                     href = "#idPrices"
-                                    class = "hover:text-white">
+                                    class = "hover:text-primary">
 
 
                                     Planos
@@ -111,7 +111,7 @@
                                 <a 
                                     id = "idAboutAncoras"
                                     href = "#idFeatures"
-                                    class = "hover:text-white">
+                                    class = "hover:text-primary">
                             
                                     Benefícios
                         
@@ -120,7 +120,7 @@
                             </nav>
 
                             <p
-                                class="bg-white p-4 rounded-xl shadow text-justify">
+                                class="bg-primary p-4 rounded-xl shadow-md text-justify">
 
                                 O <b>Nutri Connect</b> foi planejado e desenvolvido para ajudar pessoas a 
                                 melhorarem sua alimentação. A princípio parece algo simples, porém 
@@ -142,13 +142,13 @@
 
             <section
                 id = "idPrices"
-                class = "bg-white">
+                class = "bg-darkBlue">
 
                     <div
-                        class = "max-w-lg mx-auto py-5">
+                        class = "max-w-lg mx-auto pt-5 pb-6">
 
                             <h2
-                                class = "text-center mb-0"
+                                class = "text-center mb-0 text-primary"
                                 style = "font-size: 40;">
 
                                 <b>Planos</b>
@@ -156,11 +156,11 @@
                             </h2>
 
                             <nav
-                                class = "text-center mb-5"> <!-- Navigation tem os navegadores, menus e botões -->
+                                class = "text-center mb-5 text-white"> <!-- Navigation tem os navegadores, menus e botões -->
 
                                 <a 
                                     href = "#idAbout"
-                                    class = "hover:text-primary">
+                                    class = "hover:text-primary text-white">
                             
                                     Sobre
                         
@@ -170,7 +170,7 @@
 
                                 <a 
                                     href = "#idFeatures"
-                                    class = "hover:text-primary">
+                                    class = "hover:text-primary text-white">
                             
                                     Benefícios
                         
@@ -181,7 +181,7 @@
                             <br>
 
                         <div
-                            class = "flex gap-8">
+                            class = "flex gap-8 justify-between">
 
                                 <article
                                     id = "idPlanoSA"
@@ -203,13 +203,7 @@
                                             caso com profissionais especializados! 
 
                                         </p>
-
-                                        <p
-                                            id = "idPlanoSA">
-
-                                            Por apenas <b>R$ 69,90/mês</b>
-
-                                        </p>
+                                     
 
                                 </article>
 
@@ -229,12 +223,6 @@
                                             relacionamento com seu próprio corpo, desenvolvendo sua disposição, ganhando energia 
                                             e saúde! 
                                             
-                                        </p>
-
-                                        <p>
-
-                                            Por apenas <b>R$ 79,90/mês</b>
-
                                         </p>
 
                                 </article>
@@ -258,17 +246,33 @@
                                             personalizada, até uma rotina semanal de exercícios e sempre auxiliado por um 
                                             profissional, você se torna uma verdadeira máquina de competir! 
                                             
-                                        </p>
-
-                                        <p
-                                            id = "idPlanoSA">
-
-                                            Por apenas <b>R$ 99,90/mês</b>
-
-                                        </p>
+                                        </p>                               
 
                                 </article>
 
+                        </div>
+                        <div
+                            class = "flex gap-8 mt-4 justify-between">
+                            <article class = "bg-primary rounded-xl px-4 shadow-md">
+                                <p id = "idPlanoSA">
+
+                                    Por apenas <b>R$ 69,90/mês</b>
+                                </p>
+                            </article>
+                            <article class = "bg-primary rounded-xl px-4 shadow-md">    
+                                <p>
+
+                                    Por apenas <b>R$ 79,90/mês</b>
+
+                                </p>    
+                            </article>
+                            <article class = "bg-primary rounded-xl px-4 shadow-md">
+                                <p id = "idPlanoSA">
+
+                                    Por apenas <b>R$ 99,90/mês</b>
+
+                                </p>
+                            </article>
                         </div>
 
                     </div>
@@ -276,7 +280,8 @@
             </section>
 
             <section
-                id = "idFeatures">
+                id = "idFeatures"
+                class = "bg-primary">
 
                     <div
                         class = "max-w-lg mx-auto py-5">
@@ -284,7 +289,7 @@
 
                             <h2
                                 style = "font-size: 40;"
-                                class = "mb-0">
+                                class = "mb-0 text-white">
                                 
                                 Benefícios
 
@@ -312,7 +317,7 @@
 
                             </nav>
 
-                            <p class = "text-justify">
+                            <p class = "text-justify text-darkBlue">
 
                                 Escolhendo um plano do <b>Nutri Connect</b> você terá o melhor acompanhamento alimentar 
                                 possível, contando com um plano específico criado para o seu objetivo, tendo acompanhamento 
