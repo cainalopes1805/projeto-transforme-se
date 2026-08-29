@@ -24,6 +24,7 @@ function createButton(text, classes, i){
     bt.classList.add("hover:text-white");
     bt.classList.add("hover:bg-terciary");
     bt.classList.add("shadow-md");
+    bt.dataset.status = "closed"
     bt.dataset.id = i;
     return bt;
 }
@@ -88,8 +89,14 @@ if(idListUsers) {
 var botoesV = document.querySelectorAll(".show")
 botoesV.forEach((b) => {
     b.addEventListener("click", () => {
-        const id = b.dataset.id;
-        b.innerHTML = users[id].nascimento;
+        if(b.dataset.status == "closed"){
+            const id = b.dataset.id;
+            b.innerHTML = users[id].nascimento;
+            b.dataset.status = "open"
+        } else {
+            b.innerHTML = "V"
+            b.dataset.status = "closed"
+        }
     });
 })
 

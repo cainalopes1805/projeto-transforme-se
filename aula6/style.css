@@ -191,6 +191,10 @@ a {
   min-width: 205px;
 }
 
+.w-md {
+  width: 205px;
+}
+
 .max-w-lg {
   max-width: 800px;
 }
@@ -1493,12 +1497,12 @@ td {
   background-color: #0e0e0f;
 }
 
-.bg-green-50 {
-  background-color: rgba(7, 7, 7, 0.555);
+.bg-darkBlue-50 {
+  background-color: #0e0e0ff5;
 }
 
-.bg-darkBlue {
-  background-color: #0e0e0f;
+.bg-green-50 {
+  background-color: rgba(7, 7, 7, 0.555);
 }
 
 .gap-9 {
