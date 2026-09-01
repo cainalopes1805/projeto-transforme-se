@@ -1018,11 +1018,11 @@ a {
 }
 
 .bg-green-50 {
-  background-color: rgba(0, 53, 3, 0.5);
+  background-color: #00350380;
 }
 
 .bg-red {
-  background-color: rgb(197, 7, 7);
+  background-color: #c50707;
 }
 
 .hover\:bg-primary:hover {
@@ -1515,6 +1515,10 @@ td {
 
 .hover\:text-terciary:hover {
   color: #014e05;
+}
+
+.hover\:bg-darkRed:hover {
+  background-color: #810202;
 }
 
 /*# sourceMappingURL=style.css.map */

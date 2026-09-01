@@ -58,12 +58,11 @@ if(idListUsers) {
         tdAction.classList.add("text-center");
 
         tdAction.appendChild(
-            createButton("V", ["show"], i)
+            createButton("V", ["show", "mr-4"], i)
             
         ); 
 
         let span = document.createElement("span");
-        span.innerHTML = "---------";
         
         tdAction.appendChild(span);
 
